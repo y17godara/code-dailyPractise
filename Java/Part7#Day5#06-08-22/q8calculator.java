@@ -19,6 +19,8 @@ public class q8calculator {
             default: System.out.println("fault");
         }
 
+        myObj.close();
+
     }  
     
 }
