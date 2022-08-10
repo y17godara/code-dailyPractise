@@ -1,0 +1,7 @@
+OUTPUT:
+
+"Hello"
+"Hello"
+
+
+Ans- 2x times
