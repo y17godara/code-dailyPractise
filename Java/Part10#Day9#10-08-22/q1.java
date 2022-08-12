@@ -1,5 +1,0 @@
-
-
-public class q1 {
-    
-}
