@@ -6,7 +6,7 @@ public class q3 {
 
     public static void printCal(int num1, int num2) {
         int add = (num1*num2)+20;
-        System.out.println(add);
+        System.out.println("So the addition is "+ add);
     }     
     public  static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
