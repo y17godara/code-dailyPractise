@@ -4,26 +4,31 @@ import java.util.*;
 
 public class q14binTOdec {
 
-public static int binaryConv(int num){
+// Binary to Decimal Function    
+public static void binaryConv(int binNum){
+    int pow = 0;
+    int deciNum = 0;
 
-    for(int i=1; i<=num;){
-        int lastdigit = num % 10;
-        int j = lastdigit +(lastdigit*2);
-        i++;
-        return j;
+    while(binNum > 0){ //while loop
+        int lastdigit = binNum % 10;
+        deciNum = lastdigit +(lastdigit*(int)Math.pow(2, pow));
+
+        pow++;
+        binNum /= 10; 
     }
-    return 1;
+
+    System.out.println("Decimal is "+ deciNum);  
 }    
 
+//Main
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter number in Binary ");
         int num = sc.nextInt();
 
-        binaryConv(num);
-
-        
+        binaryConv(num); // calling function
+         
         sc.close();
     }
 }
