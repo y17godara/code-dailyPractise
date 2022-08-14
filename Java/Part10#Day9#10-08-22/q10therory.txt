@@ -1,0 +1,20 @@
+
+//METHODS
+
+Methods - user defined, inbuild methods.
+
+user defined - inbuild methods
+
+{                     [
+
+    factoial();             Math(); -> .pow  , .sqrt , .max
+    sum();
+    product();              sc.nextInt(); 
+}                       ]   
+
+//Function Overloading
+
+-Multiple function with the same name but different paramters.
+-1> Using Parameters -2> Using Data Types
+
+
