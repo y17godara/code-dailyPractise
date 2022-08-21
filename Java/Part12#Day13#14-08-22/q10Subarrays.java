@@ -1,6 +1,6 @@
-import javax.swing.plaf.synth.SynthSpinnerUI;
 
-public class q10 {
+
+public class q10Subarrays {
     //Function
     public static void printSubArray(int nums[]){
 
