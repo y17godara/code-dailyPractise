@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class q14Rainwater {
+public class q14WrongCode {
 
     //RainWater Function
     public static int funTrappedWater(int height[]){
 
         int n = height.length; //[n] = [height.lenght] -last variable of arrays
-
+        int trappedWater = 0; //variable
 
         /* calculate Left Max */ 
         int leftMax[] = new int[n]; //lenght of leftMax assigned
@@ -17,7 +17,7 @@ public class q14Rainwater {
         //loop to assign- leftmax
         for(int l=1; l<n; l++){
 
-            leftMax[l] = Math.max(height[l], height[l-1]); //left
+            leftMax[l] = Math.max(height[l-1], height[l]); //left
         }
 
         /* calculate Right Max */
@@ -29,20 +29,19 @@ public class q14Rainwater {
         //loop to assign- rightMax
         for(int k=n-2; k>=0; k--){ //k starts from n-2 because n-1 is already assigned above
             
-            rightMax[k] = Math.max(height[k], rightMax[k+1]);
+            rightMax[k] = Math.max(rightMax[k+1], height[k]);
         } 
         
         /* Main Loop */
-        int trappedWater = 0; //variable
-
+        
+        
         //trappedWater += trappedWater+ (waterLevel-height[i]);
         //waterLvl = min(max left boundary, max right boundary)
         //waterTrapped = waterLvl - height[i] * 1;
 
         for(int i=0; i<n; i++){
 
-            int waterLevel = Math.min(leftMax[i], rightMax[i]); //water Level calculater
-            trappedWater += (waterLevel-height[i]); // *1 is remove because bar width is 1 given which returns same result 
+        trappedWater += Math.min(leftMax[i], rightMax[i]) - height[i];
         }
   
         return trappedWater;
@@ -53,7 +52,7 @@ public class q14Rainwater {
     public static void main(String args[]){
         Scanner sc = new Scanner(System.in);
 
-        int height[] = {4, 2, 0, 6, 3, 2, 5}; //bars height -array assignes
+        int height[] = { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }; //bars height -array assignes
 
         
         System.out.println(funTrappedWater(height)); //output
