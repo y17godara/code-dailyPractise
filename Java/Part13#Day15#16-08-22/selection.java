@@ -26,7 +26,7 @@ public class selection {
             //Printing
             System.out.print(arry[i]+" ");
         }
-        System.out.println();
+        System.out.println(); 
     }
 
 
