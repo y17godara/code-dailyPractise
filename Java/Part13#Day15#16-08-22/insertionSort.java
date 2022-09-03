@@ -1,5 +1,6 @@
 public class insertionSort {
 
+    //Insertion Sort Function
     public static void insertionSort(int arry[]) {
 
         for(int i=1; i<arry.length; i++) {
